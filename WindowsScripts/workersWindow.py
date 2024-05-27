@@ -45,6 +45,7 @@ class WorkersWindow(WindowWorker):
 				city,
 				about_user
 			)
+
 			self.finish()
 
 	def on_cancel(self):
