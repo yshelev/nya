@@ -23,7 +23,12 @@ class WindowWorker(QMainWindow):
 		for comboBox, function in comboBox_function:
 			comboBox.currentTextChanged.connect(function)
 
+	def set_toggled_on_several_radio_button(self, radioButton_function: list[tuple]) -> None:
+		for radioButton, function in radioButton_function:
+			radioButton.toggled.connect(function)
+
 	def fill_combo_box(self, combo_box: QComboBox, data: list, start_value: str):
 		combo_box.clear()
 		combo_box.addItems(data)
 		combo_box.setCurrentText(start_value)
+
