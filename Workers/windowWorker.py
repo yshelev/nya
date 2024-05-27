@@ -19,6 +19,10 @@ class WindowWorker(QMainWindow):
 		for button, function in button_function:
 			button.clicked.connect(function)
 
+	def set_current_text_changed_on_several_combo_boxes(self, comboBox_function: list[tuple]) -> None:
+		for comboBox, function in comboBox_function:
+			comboBox.currentTextChanged.connect(function)
+
 	def fill_combo_box(self, combo_box: QComboBox, data: list, start_value: str):
 		combo_box.clear()
 		combo_box.addItems(data)

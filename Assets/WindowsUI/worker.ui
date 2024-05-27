@@ -34,6 +34,9 @@
        <property name="text">
         <string>Няня</string>
        </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
        <attribute name="buttonGroup">
         <string notr="true">professions</string>
        </attribute>
@@ -135,6 +138,9 @@
        </property>
        <property name="text">
         <string>С проживанием</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -298,6 +304,9 @@
     </property>
     <property name="text">
      <string>Да</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_continue">
