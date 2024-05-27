@@ -35,8 +35,9 @@ class WorkersWindow(WindowWorker):
 
 		if agreement_personal_info:
 			profession = self.professions.checkedButton().text()
-			country = self.comboBox_countries.currentText()
-			city = self.comboBox_cities.currentText()
+			is_need_dormitory = self.radioButton_2.isChecked()
+			country = self.comboBox_countries.currentText() if is_need_dormitory else "-"
+			city = self.comboBox_cities.currentText() if is_need_dormitory else "-"
 			about_user = self.textEdit.toPlainText()
 
 			info = (
