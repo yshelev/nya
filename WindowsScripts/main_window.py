@@ -9,11 +9,8 @@ from PyQt5.QtWidgets import *
 from Workers.fileWorker import FileWorker
 
 
-class Main_window(QMainWindow):
+class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.fileWorker = FileWorker()
-        uic.loadUi(self.fileWorker.get_file_from_WindowsUI("menu.ui"))
-
-
-
+        uic.loadUi(self.fileWorker.get_file_from_WindowsUI("menu.ui"), self)
