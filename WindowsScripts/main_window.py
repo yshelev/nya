@@ -31,3 +31,6 @@ class MainWindow(QMainWindow):
 
     def on_work_button_click(self):
         print(2)
+
+
+
