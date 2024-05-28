@@ -7,6 +7,8 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
 
 from Workers.windowWorker import WindowWorker
+from WindowsScripts.workersWindow import WorkersWindow
+from WindowsScripts.employerWindow import EmployerWindow
 
 
 class MainWindow(WindowWorker):
@@ -23,10 +25,12 @@ class MainWindow(WindowWorker):
         )
 
     def on_employ_button_click(self):
-        print(1)
+        self.start_window_children(EmployerWindow)
 
     def on_work_button_click(self):
-        from WindowsScripts.workersWindow import WorkersWindow
-        self.work_window = WorkersWindow(self)
-        self.work_window.show()
+        self.start_window_children(WorkersWindow)
+
+    def start_window_children(self, class_: type):
+        self.temp = class_(self)
+        self.temp.show()
         self.hide()

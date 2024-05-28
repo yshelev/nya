@@ -2,7 +2,7 @@ from WindowsScripts.main_window import *
 
 
 class WorkersWindow(WindowWorker):
-	def __init__(self, parent: MainWindow, *args):
+	def __init__(self, parent: WindowWorker, *args):
 		super().__init__()
 		self.par = parent
 		uic.loadUi(self.fileFinder.get_file_from_WindowsUI("worker.ui"), self)
@@ -24,6 +24,8 @@ class WorkersWindow(WindowWorker):
 				(self.pushButton_cancel, self.on_cancel)
 			]
 		)
+
+		self.label_warning.hide()
 
 	def on_combo_box_countries_changed(self) -> None:
 		currentCountry = self.comboBox_countries.currentText()
@@ -48,6 +50,8 @@ class WorkersWindow(WindowWorker):
 			)
 
 			self.finish()
+		else:
+			self.label_warning.show()
 
 	def on_cancel(self):
 		self.finish()
