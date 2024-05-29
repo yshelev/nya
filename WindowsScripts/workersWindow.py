@@ -7,6 +7,8 @@ class WorkersWindow(WindowWorker):
 		self.par = parent
 		uic.loadUi(self.fileFinder.get_file_from_WindowsUI("worker.ui"), self)
 
+		self.cities = self.par.cities
+
 		# fill combo boxes with start values
 		self.fill_combo_box(self.comboBox_cities, ["-"], "-")
 		self.fill_combo_box(self.comboBox_countries, self.cities.keys(), "-")

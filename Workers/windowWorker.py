@@ -1,3 +1,4 @@
+from DataClasses.User import User
 from Workers.filePathFinder import FileFinder
 from Workers.fileOpener import FileOpener
 
@@ -9,12 +10,6 @@ class WindowWorker(QMainWindow):
 		super().__init__()
 		self.fileFinder = FileFinder()
 		self.fileOpener = FileOpener()
-
-		self.cities = self.fileOpener.jsonToDict(
-			self.fileFinder.get_file_from_data_files("cities.json")
-		)
-		self.cities["-"] = ["-"]
-
 
 	def set_on_click_on_several_buttons(self, button_function: list[tuple]) -> None:
 		for button, function in button_function:
