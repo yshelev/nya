@@ -7,4 +7,3 @@ class EmployerWindow(WindowWorker):
 		self.par = parent
 		uic.loadUi(self.fileFinder.get_file_from_WindowsUI("employer.ui"), self)
 
-

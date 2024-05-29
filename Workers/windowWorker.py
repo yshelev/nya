@@ -9,6 +9,7 @@ class WindowWorker(QMainWindow):
 		super().__init__()
 		self.fileFinder = FileFinder()
 		self.fileOpener = FileOpener()
+
 		self.cities = self.fileOpener.jsonToDict(
 			self.fileFinder.get_file_from_data_files("cities.json")
 		)
