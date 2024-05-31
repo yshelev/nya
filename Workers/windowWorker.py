@@ -23,8 +23,17 @@ class WindowWorker(QMainWindow):
 		for radioButton, function in radioButton_function:
 			radioButton.toggled.connect(function)
 
-	def fill_combo_box(self, combo_box: QComboBox, data: list, start_value: str):
+	def fill_combo_box(self, combo_box: QComboBox, data: list, start_value: str) -> None:
 		combo_box.clear()
 		combo_box.addItems(data)
 		combo_box.setCurrentText(start_value)
 
+	def fill_table_with_data(self, table: QTableWidget, data: list, title: list) -> None:
+		table.setColumnCount(len(title))
+		table.setRowCount(len(data))
+		table.setHorizontalHeaderLabels(title)
+
+		for i, row in enumerate(data):
+			for j, elem in enumerate(row):
+				item = QTableWidgetItem(str(elem))
+				table.setItem(i, j, item)
