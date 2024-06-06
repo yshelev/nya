@@ -32,7 +32,6 @@ class WindowWorker(QMainWindow):
 		table.setColumnCount(len(title))
 		table.setRowCount(len(data))
 		table.setHorizontalHeaderLabels(title)
-
 		for i, row in enumerate(data):
 			for j, elem in enumerate(row):
 				item = QTableWidgetItem(str(elem))

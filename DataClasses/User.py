@@ -1,6 +1,5 @@
 class User:
-	def __init__(self, id_, number, password):
-		self.__id = id_
+	def __init__(self, number, password):
 		self.__password = password
 		self._number = number
 
@@ -9,9 +8,6 @@ class User:
 
 	def get_number(self):
 		return self._number
-
-	def get_id(self):
-		return self.__id
 
 	def __repr__(self):
 		num1 = self._number[0]

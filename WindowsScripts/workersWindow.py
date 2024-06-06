@@ -20,6 +20,7 @@ class WorkersWindow(WindowWorker):
 			]
 		)
 
+		# set signals to buttons
 		self.set_on_click_on_several_buttons(
 			[
 				(self.pushButton_continue, self.on_confirm),
@@ -48,7 +49,12 @@ class WorkersWindow(WindowWorker):
 
 				user = self.par.current_user
 				if user:
-					id_ = user.get_id()
+					number = user.get_number()
+					id_, password = self.fileOpener.sqliteToList(self.fileFinder.get_file_from_data_files("employers.db"), f"""
+						SELECT (id, password)
+						FROM Users 
+						WHERE number = {number}
+					""")[0]
 
 					info = [
 						id_,
@@ -58,12 +64,7 @@ class WorkersWindow(WindowWorker):
 						about_user
 					]
 
-					sqlite_info = "\"" + "\", \"".join(list(map(lambda x: str(x), info))) + "\""
-					print(sqlite_info)
-					self.fileOpener.userToSqlite(self.fileFinder.get_file_from_data_files("employers.db"), f"""
-						INSERT INTO Employers (user_id, profession, country, city, user_about)
-						VALUES ({sqlite_info})
-					""")
+					self.par.append_employer(number, password, info)
 
 					self.finish()
 

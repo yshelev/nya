@@ -7,6 +7,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
 
 from DataClasses.User import User
+from DataClasses.Employer import Employer
 from Workers.windowWorker import WindowWorker
 from WindowsScripts.workersWindow import WorkersWindow
 from WindowsScripts.employerWindow import EmployerWindow
@@ -30,7 +31,7 @@ class MainWindow(WindowWorker):
         users_query_result = self.fileOpener.sqliteToList(
             self.fileFinder.get_file_from_data_files("employers.db"),
             f"""
-                SELECT id, phone_number, password FROM Users
+                SELECT phone_number, password FROM Users
             """
         )
 
@@ -51,7 +52,7 @@ class MainWindow(WindowWorker):
         ]
 
         self.employers = [
-
+            Employer(*item) for item in employer_query_result
         ]
 
         self.cities = self.fileOpener.jsonToDict(
@@ -63,10 +64,7 @@ class MainWindow(WindowWorker):
         self.start_window_children(EmployerWindow)
 
     def on_work_button_click(self):
-        try:
-            self.start_window_children(WorkersWindow)
-        except Exception as e:
-            print(e)
+        self.start_window_children(WorkersWindow)
 
     def on_sign_click(self):
         self.start_window_children(SignWindow)
@@ -78,6 +76,14 @@ class MainWindow(WindowWorker):
 
     def set_current_user(self, user: User):
         self.current_user = user
+
+    def append_employer(self, number: str, password: str, employer_info: list) -> None:
+        self.employers.append(Employer(number, password))
+        sqlite_info = "\"" + "\", \"".join(list(map(lambda x: str(x), employer_info))) + "\""
+        self.fileOpener.userToSqlite(self.fileFinder.get_file_from_data_files("employers.db"), f"""
+            INSERT INTO Employers (user_id, profession, country, city, user_about)
+            VALUES ({sqlite_info})
+        """)
 
     def append_user(self, number: str, password: str) -> None:
         self.users.append(User(number, password))
