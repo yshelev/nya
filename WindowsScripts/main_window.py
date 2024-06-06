@@ -27,17 +27,31 @@ class MainWindow(WindowWorker):
             ],
         )
 
-        query_result = self.fileOpener.sqliteToList(
+        users_query_result = self.fileOpener.sqliteToList(
             self.fileFinder.get_file_from_data_files("employers.db"),
             f"""
-                SELECT phone_number, password FROM Users
+                SELECT id, phone_number, password FROM Users
+            """
+        )
+
+        employer_query_result = self.fileOpener.sqliteToList(
+            self.fileFinder.get_file_from_data_files("employers.db"),
+            f"""
+                SELECT Employers.user_id, Users.phone_number, Users.password, Employers.profession, Employers.country, Employers.city, Employers.user_about
+                FROM Employers
+                INNER JOIN Users 
+                ON Users.id = Employers.user_id
             """
         )
 
         self.current_user = None
 
         self.users = [
-            User(*item) for item in query_result
+            User(*item) for item in users_query_result
+        ]
+
+        self.employers = [
+
         ]
 
         self.cities = self.fileOpener.jsonToDict(
@@ -49,7 +63,10 @@ class MainWindow(WindowWorker):
         self.start_window_children(EmployerWindow)
 
     def on_work_button_click(self):
-        self.start_window_children(WorkersWindow)
+        try:
+            self.start_window_children(WorkersWindow)
+        except Exception as e:
+            print(e)
 
     def on_sign_click(self):
         self.start_window_children(SignWindow)

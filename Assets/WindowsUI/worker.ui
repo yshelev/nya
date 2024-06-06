@@ -348,7 +348,7 @@
      <string>Отменить</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_warning">
+   <widget class="QLabel" name="label_warning_personal_info">
     <property name="enabled">
      <bool>false</bool>
     </property>
@@ -375,6 +375,35 @@
     </property>
     <property name="text">
      <string>Это обязательное поле.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_warning_no_user">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>240</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: red</string>
+    </property>
+    <property name="text">
+     <string>Сначала зарегистрируйтесь или войдите в аккаунт</string>
     </property>
    </widget>
   </widget>

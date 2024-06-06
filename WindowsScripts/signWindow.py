@@ -35,28 +35,26 @@ class SignWindow(WindowWorker):
 		self.label_warning.setText(NO_USER_WITH_PHONE_NUMBER)
 
 	def on_authorization_click(self):
-		try:
-			number = self.textEdit_login.toPlainText()
-			password = self.textEdit_password.toPlainText()
-			number = "".join(re.split(fr"[{SYMBOLS_TO_DELETE_FROM_NUMBER}]+", number))
+		number = self.textEdit_login.toPlainText()
+		password = self.textEdit_password.toPlainText()
+		number = "".join(re.split(fr"[{SYMBOLS_TO_DELETE_FROM_NUMBER}]+", number))
 
-			if len(number) != 11:
-				self.label_warning.setText(INCORRECT_NUMBER)
+		if len(number) != 11:
+			self.label_warning.setText(INCORRECT_NUMBER)
+			return
+
+		for user in self.par.users:
+			if user.get_number() == number:
+				self.label_warning.setText(USER_IS_ALREADY_REGISTERED)
 				return
 
-			for user in self.par.users:
-				if user.get_number() == number:
-					self.label_warning.setText(USER_IS_ALREADY_REGISTERED)
-					return
+		if password == "":
+			self.label_warning.setText(INCORRECT_PASSWORD)
+			return
 
-			if password == "":
-				self.label_warning.setText(INCORRECT_PASSWORD)
-				return
-
-			self.par.append_user(number, password)
-			self.finish()
-		except Exception as e:
-			print(e)
+		self.par.append_user(number, password)
+		self.par.set_current_user(User(number, password))
+		self.finish()
 
 	def finish(self):
 		self.par.show()

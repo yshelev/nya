@@ -27,7 +27,8 @@ class WorkersWindow(WindowWorker):
 			]
 		)
 
-		self.label_warning.hide()
+		self.label_warning_no_user.hide()
+		self.label_warning_personal_info.hide()
 
 	def on_combo_box_countries_changed(self) -> None:
 		currentCountry = self.comboBox_countries.currentText()
@@ -35,25 +36,44 @@ class WorkersWindow(WindowWorker):
 		self.fill_combo_box(self.comboBox_cities, data, data[0])
 
 	def on_confirm(self):
-		agreement_personal_info = self.radioButton_personal_info.isChecked()
+		try:
+			agreement_personal_info = self.radioButton_personal_info.isChecked()
 
-		if agreement_personal_info:
-			profession = self.professions.checkedButton().text()
-			is_need_dormitory = self.radioButton_2.isChecked()
-			country = self.comboBox_countries.currentText() if is_need_dormitory else "-"
-			city = self.comboBox_cities.currentText() if is_need_dormitory else "-"
-			about_user = self.textEdit.toPlainText()
+			if agreement_personal_info:
+				profession = self.professions.checkedButton().text()
+				is_need_dormitory = self.radioButton_2.isChecked()
+				country = self.comboBox_countries.currentText() if is_need_dormitory else "-"
+				city = self.comboBox_cities.currentText() if is_need_dormitory else "-"
+				about_user = self.textEdit.toPlainText()
 
-			info = (
-				profession,
-				country,
-				city,
-				about_user
-			)
+				user = self.par.current_user
+				if user:
+					id_ = user.get_id()
 
-			self.finish()
-		else:
-			self.label_warning.show()
+					info = [
+						id_,
+						profession,
+						country,
+						city,
+						about_user
+					]
+
+					sqlite_info = "\"" + "\", \"".join(list(map(lambda x: str(x), info))) + "\""
+					print(sqlite_info)
+					self.fileOpener.userToSqlite(self.fileFinder.get_file_from_data_files("employers.db"), f"""
+						INSERT INTO Employers (user_id, profession, country, city, user_about)
+						VALUES ({sqlite_info})
+					""")
+
+					self.finish()
+
+				else:
+					self.label_warning_no_user.show()
+
+			else:
+				self.label_warning_personal_info.show()
+		except Exception as e:
+			print(e)
 
 	def on_cancel(self):
 		self.finish()

@@ -1,4 +1,5 @@
 from WindowsScripts.main_window import *
+from DataClasses.Constants import *
 
 
 class EmployerWindow(WindowWorker):
@@ -7,9 +8,4 @@ class EmployerWindow(WindowWorker):
 		self.par = parent
 		uic.loadUi(self.fileFinder.get_file_from_WindowsUI("employer.ui"), self)
 
-		self.fill_table_with_data(self.table, self.par.employers, title=[
-			""
-		])
-
-
-
+		self.fill_table_with_data(self.table, self.par.employers, title=EMPLOYERS_TABLE_TITLE)
