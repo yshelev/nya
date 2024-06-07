@@ -48,25 +48,21 @@ class WorkersWindow(WindowWorker):
 
 			user = self.par.current_user
 			if user:
-				try:
+				number = user.get_number()
+				id_, _, password = self.fileOpener.sqliteToList(self.fileFinder.get_file_from_data_files("employers.db"), f"""
+					SELECT *
+					FROM Users 
+					WHERE phone_number = "{number}"
+				""")[0]
 
-					number = user.get_number()
-					print(number)
-					id_, _, password = self.fileOpener.sqliteToList(self.fileFinder.get_file_from_data_files("employers.db"), f"""
-						SELECT *
-						FROM Users 
-						WHERE phone_number = "{number}"
-					""")[0]
+				info = [
+					profession,
+					country,
+					city,
+					about_user
+				]
 
-					info = [
-						profession,
-						country,
-						city,
-						about_user
-					]
-					self.par.append_employer(id_, number, password, info)
-				except Exception as e:
-					print(e)
+				self.par.append_employer(id_, number, password, info)
 
 				self.finish()
 
