@@ -77,8 +77,9 @@ class MainWindow(WindowWorker):
     def set_current_user(self, user: User):
         self.current_user = user
 
-    def append_employer(self, number: str, password: str, employer_info: list) -> None:
-        self.employers.append(Employer(number, password))
+    def append_employer(self, id_: int, number: str, password: str, employer_info: list) -> None:
+        self.employers.append(Employer(id_, number, password, *employer_info))
+        employer_info = [id_] + employer_info
         sqlite_info = "\"" + "\", \"".join(list(map(lambda x: str(x), employer_info))) + "\""
         self.fileOpener.userToSqlite(self.fileFinder.get_file_from_data_files("employers.db"), f"""
             INSERT INTO Employers (user_id, profession, country, city, user_about)

@@ -37,44 +37,44 @@ class WorkersWindow(WindowWorker):
 		self.fill_combo_box(self.comboBox_cities, data, data[0])
 
 	def on_confirm(self):
-		try:
-			agreement_personal_info = self.radioButton_personal_info.isChecked()
+		agreement_personal_info = self.radioButton_personal_info.isChecked()
 
-			if agreement_personal_info:
-				profession = self.professions.checkedButton().text()
-				is_need_dormitory = self.radioButton_2.isChecked()
-				country = self.comboBox_countries.currentText() if is_need_dormitory else "-"
-				city = self.comboBox_cities.currentText() if is_need_dormitory else "-"
-				about_user = self.textEdit.toPlainText()
+		if agreement_personal_info:
+			profession = self.professions.checkedButton().text()
+			is_need_dormitory = self.radioButton_2.isChecked()
+			country = self.comboBox_countries.currentText() if is_need_dormitory else "-"
+			city = self.comboBox_cities.currentText() if is_need_dormitory else "-"
+			about_user = self.textEdit.toPlainText()
 
-				user = self.par.current_user
-				if user:
+			user = self.par.current_user
+			if user:
+				try:
+
 					number = user.get_number()
-					id_, password = self.fileOpener.sqliteToList(self.fileFinder.get_file_from_data_files("employers.db"), f"""
-						SELECT (id, password)
+					print(number)
+					id_, _, password = self.fileOpener.sqliteToList(self.fileFinder.get_file_from_data_files("employers.db"), f"""
+						SELECT *
 						FROM Users 
-						WHERE number = {number}
+						WHERE phone_number = "{number}"
 					""")[0]
 
 					info = [
-						id_,
 						profession,
 						country,
 						city,
 						about_user
 					]
+					self.par.append_employer(id_, number, password, info)
+				except Exception as e:
+					print(e)
 
-					self.par.append_employer(number, password, info)
-
-					self.finish()
-
-				else:
-					self.label_warning_no_user.show()
+				self.finish()
 
 			else:
-				self.label_warning_personal_info.show()
-		except Exception as e:
-			print(e)
+				self.label_warning_no_user.show()
+
+		else:
+			self.label_warning_personal_info.show()
 
 	def on_cancel(self):
 		self.finish()
