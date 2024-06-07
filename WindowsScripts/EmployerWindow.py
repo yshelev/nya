@@ -73,8 +73,6 @@ class EmployerWindow(WindowWorker):
 			(country_combo_box_data == "все")
 		)
 
-		print(profession_output, city_output, country_output)
-
 		return profession_output and city_output and country_output
 
 	def finish(self):
