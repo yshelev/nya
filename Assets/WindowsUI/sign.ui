@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/images/bg.jpg.jpg);
+     <string notr="true">border-image: url(:/images/bg.jpg);
 border-radius: 20px;</string>
     </property>
     <property name="text">

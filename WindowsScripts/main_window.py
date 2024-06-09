@@ -10,7 +10,7 @@ from DataClasses.User import User
 from DataClasses.Employer import Employer
 from Workers.windowWorker import WindowWorker
 from WindowsScripts.workersWindow import WorkersWindow
-from WindowsScripts.EmployerWindow import EmployerWindow
+from WindowsScripts.employerWindow import EmployerWindow
 from WindowsScripts.signWindow import SignWindow
 
 

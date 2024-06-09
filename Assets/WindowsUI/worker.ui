@@ -23,7 +23,7 @@
       <x>20</x>
       <y>100</y>
       <width>491</width>
-      <height>101</height>
+      <height>113</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -33,6 +33,15 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
        </property>
        <property name="text">
         <string>Няня</string>
@@ -52,6 +61,15 @@
          <pointsize>14</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
        <property name="text">
         <string>Сиделка</string>
        </property>
@@ -66,6 +84,15 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
        </property>
        <property name="text">
         <string>Домработница</string>
@@ -82,6 +109,15 @@
          <pointsize>14</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
        <property name="text">
         <string>Повар</string>
        </property>
@@ -96,6 +132,15 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
        </property>
        <property name="text">
         <string>Садовник</string>
@@ -112,6 +157,15 @@
          <pointsize>14</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
        <property name="text">
         <string>Ассистент</string>
        </property>
@@ -126,9 +180,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>210</y>
-      <width>211</width>
-      <height>73</height>
+      <y>220</y>
+      <width>231</width>
+      <height>121</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -138,6 +192,15 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
        </property>
        <property name="text">
         <string>С проживанием</string>
@@ -154,6 +217,15 @@
          <pointsize>14</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
        <property name="text">
         <string>Без проживания</string>
        </property>
@@ -161,59 +233,47 @@
      </item>
     </layout>
    </widget>
-   <widget class="QComboBox" name="comboBox_countries">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>330</y>
-      <width>211</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox_cities">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>440</y>
-      <width>211</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>330</y>
-      <width>561</width>
+      <x>440</x>
+      <y>320</y>
+      <width>521</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>300</y>
-      <width>91</width>
-      <height>31</height>
+      <x>440</x>
+      <y>260</y>
+      <width>101</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
     </property>
     <property name="text">
      <string>О себе</string>
@@ -223,54 +283,27 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>50</y>
-      <width>141</width>
-      <height>41</height>
+      <y>40</y>
+      <width>171</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
     </property>
     <property name="text">
      <string>Профессия</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>280</y>
-      <width>171</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Государство</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>390</y>
-      <width>111</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Город</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -279,13 +312,22 @@
       <x>20</x>
       <y>510</y>
       <width>951</width>
-      <height>71</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
     </property>
     <property name="text">
      <string>Вы даете разрешение на пересылку ваших контактных данных заинтересованным лицам</string>
@@ -295,15 +337,24 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>560</y>
+      <y>570</y>
       <width>111</width>
-      <height>31</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
     </property>
     <property name="text">
      <string>Да</string>
@@ -315,8 +366,8 @@
    <widget class="QPushButton" name="pushButton_continue">
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>610</y>
+      <x>790</x>
+      <y>630</y>
       <width>171</width>
       <height>61</height>
      </rect>
@@ -326,6 +377,22 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+}
+
+QPushButton:hover{
+background-color: rgba(110, 190, 230, 200);
+}
+QPushButton:pressed{
+background-color: rgba(90, 176, 219, 200);
+}</string>
+    </property>
     <property name="text">
      <string>Продолжить</string>
     </property>
@@ -334,7 +401,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>610</y>
+      <y>630</y>
       <width>181</width>
       <height>61</height>
      </rect>
@@ -343,6 +410,22 @@
      <font>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+}
+
+QPushButton:hover{
+background-color: rgba(110, 190, 230, 200);
+}
+QPushButton:pressed{
+background-color: rgba(90, 176, 219, 200);
+}</string>
     </property>
     <property name="text">
      <string>Отменить</string>
@@ -354,9 +437,9 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>565</y>
-      <width>221</width>
+      <x>140</x>
+      <y>580</y>
+      <width>281</width>
       <height>21</height>
      </rect>
     </property>
@@ -383,9 +466,9 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>240</y>
-      <width>481</width>
+      <x>340</x>
+      <y>220</y>
+      <width>641</width>
       <height>41</height>
      </rect>
     </property>
@@ -405,6 +488,96 @@
     <property name="text">
      <string>Сначала зарегистрируйтесь или войдите в аккаунт</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>371</width>
+      <height>176</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
+       <property name="text">
+        <string>Город</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="comboBox_cities">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBox_countries">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+       </property>
+       <property name="text">
+        <string>Государство</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>

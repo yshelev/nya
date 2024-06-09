@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>957</width>
-    <height>728</height>
+    <width>766</width>
+    <height>599</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,11 +17,18 @@
    <widget class="QTableWidget" name="table">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>40</x>
       <y>171</y>
-      <width>821</width>
-      <height>471</height>
+      <width>701</width>
+      <height>271</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
     </property>
    </widget>
    <widget class="QComboBox" name="professionBox">
@@ -33,6 +40,14 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+    </property>
    </widget>
    <widget class="QComboBox" name="countryBox">
     <property name="geometry">
@@ -42,6 +57,14 @@
       <width>171</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
     </property>
    </widget>
    <widget class="QComboBox" name="cityBox">
@@ -53,15 +76,39 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>640</y>
+      <y>470</y>
       <width>91</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+}
+
+QPushButton:hover{
+background-color: rgba(110, 190, 230, 200);
+}
+QPushButton:pressed{
+background-color: rgba(90, 176, 219, 200);
+}</string>
     </property>
     <property name="text">
      <string>Назад</string>
@@ -70,11 +117,27 @@
    <widget class="QPushButton" name="filterButton">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>640</y>
+      <x>450</x>
+      <y>470</y>
       <width>141</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+}
+
+QPushButton:hover{
+background-color: rgba(110, 190, 230, 200);
+}
+QPushButton:pressed{
+background-color: rgba(90, 176, 219, 200);
+}</string>
     </property>
     <property name="text">
      <string>применить фильтр</string>
@@ -86,8 +149,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>957</width>
-     <height>23</height>
+     <width>766</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
