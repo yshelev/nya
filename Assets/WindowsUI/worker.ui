@@ -257,7 +257,7 @@ color: rgba(12, 82, 117, 255);
      <rect>
       <x>440</x>
       <y>260</y>
-      <width>101</width>
+      <width>111</width>
       <height>51</height>
      </rect>
     </property>
@@ -267,11 +267,11 @@ color: rgba(12, 82, 117, 255);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">
+     <string notr="true"> 
 border-radius: 15px;
 padding: 10px;
 border: 2px solid rgba(12, 82, 117, 255);
-background-color: rgba(255, 255, 255, 200);
+background-color: rgba(145, 145, 145, 200);
 color: rgba(12, 82, 117, 255);
 </string>
     </property>
@@ -294,11 +294,11 @@ color: rgba(12, 82, 117, 255);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">
+     <string notr="true"> 
 border-radius: 15px;
 padding: 10px;
 border: 2px solid rgba(12, 82, 117, 255);
-background-color: rgba(255, 255, 255, 200);
+background-color: rgba(145, 145, 145, 200);
 color: rgba(12, 82, 117, 255);
 </string>
     </property>
@@ -311,7 +311,7 @@ color: rgba(12, 82, 117, 255);
      <rect>
       <x>20</x>
       <y>510</y>
-      <width>621</width>
+      <width>951</width>
       <height>51</height>
      </rect>
     </property>
@@ -321,11 +321,11 @@ color: rgba(12, 82, 117, 255);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">
+     <string notr="true"> 
 border-radius: 15px;
 padding: 10px;
 border: 2px solid rgba(12, 82, 117, 255);
-background-color: rgba(255, 255, 255, 200);
+background-color: rgba(145, 145, 145, 200);
 color: rgba(12, 82, 117, 255);
 </string>
     </property>
@@ -507,11 +507,11 @@ background-color: rgba(90, 176, 219, 200);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">
+        <string notr="true"> 
 border-radius: 15px;
 padding: 10px;
 border: 2px solid rgba(12, 82, 117, 255);
-background-color: rgba(255, 255, 255, 200);
+background-color: rgba(145, 145, 145, 200);
 color: rgba(12, 82, 117, 255);
 </string>
        </property>
@@ -564,11 +564,11 @@ color: rgba(12, 82, 117, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">
+        <string notr="true"> 
 border-radius: 15px;
 padding: 10px;
 border: 2px solid rgba(12, 82, 117, 255);
-background-color: rgba(255, 255, 255, 200);
+background-color: rgba(145, 145, 145, 200);
 color: rgba(12, 82, 117, 255);
 </string>
        </property>
