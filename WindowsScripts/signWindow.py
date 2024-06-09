@@ -13,7 +13,8 @@ class SignWindow(WindowWorker):
 		self.set_on_click_on_several_buttons(
 			[
 				(self.pushButton_registration, self.on_authorization_click),
-				(self.pushButton_signin, self.on_sign_in_click)
+				(self.pushButton_signin, self.on_sign_in_click),
+				(self.returnButton, self.finish)
 			]
 		)
 

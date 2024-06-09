@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
+    <width>645</width>
     <height>599</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>40</x>
       <y>171</y>
-      <width>701</width>
+      <width>571</width>
       <height>271</height>
      </rect>
     </property>
@@ -149,8 +149,8 @@ background-color: rgba(90, 176, 219, 200);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>766</width>
-     <height>26</height>
+     <width>645</width>
+     <height>23</height>
     </rect>
    </property>
   </widget>
