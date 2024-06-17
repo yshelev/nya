@@ -1,4 +1,6 @@
 from PyQt5 import uic
+from PyQt5.QtWidgets import QMessageBox
+
 from Workers.windowWorker import WindowWorker
 
 
@@ -39,6 +41,16 @@ class WorkersWindow(WindowWorker):
 		self.fill_combo_box(self.comboBox_cities, data, data[0])
 
 	def on_confirm(self):
+		result = QMessageBox.question(
+			self,
+			"выход",
+			"вы уерены в данных?",
+			QMessageBox.Yes | QMessageBox.No
+		)
+
+		if result == QMessageBox.No:
+			return
+
 		# собираем информацию о заполненную информацию о работнике
 		agreement_personal_info = self.radioButton_personal_info.isChecked()
 		profession = self.professions.checkedButton().text()

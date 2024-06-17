@@ -1,4 +1,5 @@
 from PyQt5 import uic
+from PyQt5.QtWidgets import QMessageBox
 
 from DataClasses.User import User
 from DataClasses.Employer import Employer
