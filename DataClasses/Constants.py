@@ -5,6 +5,7 @@ USER_IS_ALREADY_REGISTERED = "Пользователь с таким номер�
 NO_USER_WITH_PHONE_NUMBER = "Пользователя с таким номером телефона не существует"
 SYMBOLS_TO_DELETE_FROM_NUMBER = " ,()+a-fа-я./|\\-"
 ALL = "все"
+CURRENT_NUMBER_LENGTH = 11
 
 EMPLOYERS_TABLE_TITLE = [
 	"номер телефона",

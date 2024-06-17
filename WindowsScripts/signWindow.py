@@ -1,4 +1,5 @@
-from WindowsScripts.main_window import *
+from Workers.windowWorker import WindowWorker
+from PyQt5 import uic
 import re
 from DataClasses.User import User
 from DataClasses.Constants import *
@@ -25,7 +26,6 @@ class SignWindow(WindowWorker):
 
 		for user in self.par.users:
 			if user.get_number() == number:
-
 				if user.check_password(password):
 					self.par.set_current_user(user)
 					self.finish()
@@ -40,7 +40,7 @@ class SignWindow(WindowWorker):
 		password = self.textEdit_password.toPlainText()
 		number = "".join(re.split(fr"[{SYMBOLS_TO_DELETE_FROM_NUMBER}]+", number))
 
-		if len(number) != 11:
+		if len(number) != CURRENT_NUMBER_LENGTH:
 			self.label_warning.setText(INCORRECT_NUMBER)
 			return
 
