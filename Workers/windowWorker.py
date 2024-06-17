@@ -11,7 +11,7 @@ class WindowWorker(QMainWindow):
 		self.fileOpener = FileOpener()
 
 	@staticmethod
-	def set_on_click_on_several_buttons(self, button_function: list[tuple]) -> None:
+	def set_on_click_on_several_buttons(button_function: list[tuple]) -> None:
 		"""
 		accepts a list of pairs (button, function) and
 		assigns a function to each button in the parameter .clicked.connect()
@@ -20,7 +20,7 @@ class WindowWorker(QMainWindow):
 			button.clicked.connect(function)
 
 	@staticmethod
-	def set_current_text_changed_on_several_combo_boxes(self, comboBox_function: list[tuple]) -> None:
+	def set_current_text_changed_on_several_combo_boxes(comboBox_function: list[tuple]) -> None:
 		"""
 		accepts a list of pairs (comboBox, function) and
 		assigns a function to each comboBox in the parameter .currentTextChanged.connect()
@@ -29,7 +29,7 @@ class WindowWorker(QMainWindow):
 			comboBox.currentTextChanged.connect(function)
 
 	@staticmethod
-	def set_toggled_on_several_radio_button(self, radioButton_function: list[tuple]) -> None:
+	def set_toggled_on_several_radio_button(radioButton_function: list[tuple]) -> None:
 		"""
 		accepts a list of pairs (radioButton, function) and
 		assigns a function to each radioButton in the parameter .toggled.connect()
@@ -38,7 +38,7 @@ class WindowWorker(QMainWindow):
 			radioButton.toggled.connect(function)
 
 	@staticmethod
-	def fill_combo_box(self, combo_box: QComboBox, data: list, start_value: str) -> None:
+	def fill_combo_box(combo_box: QComboBox, data: list, start_value: str) -> None:
 		"""
 		fill combo_box with data and set start_value
 		"""
@@ -47,7 +47,7 @@ class WindowWorker(QMainWindow):
 		combo_box.setCurrentText(start_value)
 
 	@staticmethod
-	def fill_table_with_data(self, table: QTableWidget, data: list, title: list) -> None:
+	def fill_table_with_data(table: QTableWidget, data: list, title: list) -> None:
 		"""
 		fill table with data and set title
 		"""
