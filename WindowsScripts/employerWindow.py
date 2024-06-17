@@ -16,7 +16,7 @@ class EmployerWindow(WindowWorker):
 
 		self.fill_combo_box(self.professionBox, PROFESSIONS + FILTER_COMBO_BOX_ALL, ALL)
 		self.fill_combo_box(self.cityBox, FILTER_COMBO_BOX_ALL, ALL)
-		self.fill_combo_box(self.countryBox, list(self.cities.keys()) + FILTER_COMBO_BOX_ALL, ALL)
+		self.fill_combo_box(self.countryBox, list(self.cities.keys()), ALL)
 
 		self.fill_table_with_data(self.table, self.par.employers, title=EMPLOYERS_TABLE_TITLE)
 
