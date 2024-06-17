@@ -93,13 +93,51 @@ background-color: rgba(90, 176, 219, 200);
       <x>700</x>
       <y>10</y>
       <width>91</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-radius: 15px;
+padding: 10px;
+border: 2px solid rgba(12, 82, 117, 255);
+background-color: rgba(255, 255, 255, 200);
+color: rgba(12, 82, 117, 255);
+}
+
+QPushButton:hover{
+background-color: rgba(110, 190, 230, 200);
+}
+QPushButton:pressed{
+background-color: rgba(90, 176, 219, 200);
+}</string>
     </property>
     <property name="text">
      <string>Войти</string>
     </property>
    </widget>
+   <widget class="QLabel" name="bg">
+    <property name="geometry">
+     <rect>
+      <x>4</x>
+      <y>5</y>
+      <width>801</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Backgrounds/BG.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>bg</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>sign_btn</zorder>
   </widget>
  </widget>
  <resources/>
