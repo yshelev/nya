@@ -1,4 +1,3 @@
-
 from PyQt5 import uic
 
 from DataClasses.User import User
