@@ -1,4 +1,5 @@
-from WindowsScripts.main_window import *
+from PyQt5 import uic
+from Workers.windowWorker import WindowWorker
 
 
 class WorkersWindow(WindowWorker):
