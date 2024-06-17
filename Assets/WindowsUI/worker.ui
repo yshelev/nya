@@ -95,7 +95,7 @@ color: rgba(12, 82, 117, 255);
 </string>
        </property>
        <property name="text">
-        <string>Домработница</string>
+        <string>Горничная</string>
        </property>
        <attribute name="buttonGroup">
         <string notr="true">professions</string>
