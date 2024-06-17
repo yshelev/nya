@@ -13,9 +13,9 @@ class Employer(User):
 		self.data_index = 0
 		self.stop_data_index = 5
 
-	def present_info(self):
-		return self.data
-
+	"""
+	__iter__ и __next__ для итерации по self.data
+	"""
 	def __iter__(self):
 		self.data_index = -1
 		return self

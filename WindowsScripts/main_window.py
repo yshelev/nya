@@ -13,7 +13,8 @@ class MainWindow(WindowWorker):
         super().__init__()
         uic.loadUi(self.fileFinder.get_file_from_WindowsUI("menu.ui"), self)
 
-        # setting on clicks. If you need set +1, just add (button, on_click)
+        # установка сигналов на кнопки
+        # если на кнопку нужно установить сигнал, надо добавить пару (кнопка, функция) в список
         self.set_on_click_on_several_buttons(
             [
                 (self.employ_btn, self.on_employ_button_click),
@@ -22,6 +23,7 @@ class MainWindow(WindowWorker):
             ],
         )
 
+        # заполнение списка пользователей и работников данными из бд
         users_query_result = self.fileOpener.sqliteToList(
             self.fileFinder.get_file_from_data_files("employers.db"),
             f"""
@@ -49,6 +51,7 @@ class MainWindow(WindowWorker):
             Employer(*item) for item in employer_query_result
         ]
 
+        # заполнение списка городов данными из json
         self.cities = self.fileOpener.jsonToDict(
             self.fileFinder.get_file_from_data_files("cities.json")
         )
@@ -72,16 +75,26 @@ class MainWindow(WindowWorker):
         self.current_user = user
 
     def append_employer(self, id_: int, number: str, password: str, employer_info: list) -> None:
+        # добавление работника в список работников в программе
         self.employers.append(Employer(id_, number, password, *employer_info))
+
+        # получение информации о работника
         employer_info = [id_] + employer_info
+
+        # перевод информации в формат sqlite
         sqlite_info = "\"" + "\", \"".join(list(map(lambda x: str(x), employer_info))) + "\""
+
+        # добавление информации про работника в бд
         self.fileOpener.userToSqlite(self.fileFinder.get_file_from_data_files("employers.db"), f"""
             INSERT INTO Employers (user_id, profession, country, city, user_about)
             VALUES ({sqlite_info})
         """)
 
     def append_user(self, number: str, password: str) -> None:
+        # добавление пользователя в список работников в программе
         self.users.append(User(number, password))
+
+        # добавление информации про пользователя в бд
         self.fileOpener.userToSqlite(self.fileFinder.get_file_from_data_files("employers.db"), f"""
             INSERT INTO Users (phone_number, password)
             VALUES ({number}, {password})

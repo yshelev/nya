@@ -12,18 +12,21 @@ class EmployerWindow(WindowWorker):
 
 		self.cities = self.par.cities
 
+		# заполнение комбобоксов
 		self.fill_combo_box(self.professionBox, PROFESSIONS + FILTER_COMBO_BOX_ALL, ALL)
 		self.fill_combo_box(self.cityBox, FILTER_COMBO_BOX_ALL, ALL)
 		self.fill_combo_box(self.countryBox, list(self.cities.keys()) + FILTER_COMBO_BOX_ALL, ALL)
 
 		self.fill_table_with_data(self.table, self.par.employers, title=EMPLOYERS_TABLE_TITLE)
 
+		# установка сигналов на комбобоксы
 		self.set_current_text_changed_on_several_combo_boxes(
 			[
 				(self.countryBox, self.on_combo_box_countries_changed)
 			]
 		)
 
+		# установка сигналов на кнопки
 		self.set_on_click_on_several_buttons(
 			[
 				(self.backButton, self.finish),
@@ -32,6 +35,7 @@ class EmployerWindow(WindowWorker):
 		)
 
 	def on_combo_box_countries_changed(self) -> None:
+		# при смене данных в комбо боксе страны так же меняем данные для комбо боксов городов
 		currentCountry = self.countryBox.currentText()
 		data = self.cities[currentCountry]
 		self.fill_combo_box(
