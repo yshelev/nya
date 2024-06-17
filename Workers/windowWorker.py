@@ -1,4 +1,3 @@
-from DataClasses.User import User
 from Workers.filePathFinder import FileFinder
 from Workers.fileOpener import FileOpener
 
