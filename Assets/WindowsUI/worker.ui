@@ -507,10 +507,8 @@ background-color: rgba(90, 176, 219, 200);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true"> 
-border-radius: 15px;
+        <string notr="true">border: 2px solid rgba(12, 82, 117, 255); 
 padding: 10px;
-border: 2px solid rgba(12, 82, 117, 255);
 background-color: rgba(145, 145, 145, 200);
 color: rgba(12, 82, 117, 255);
 </string>
@@ -529,7 +527,7 @@ color: rgba(12, 82, 117, 255);
        </property>
        <property name="styleSheet">
         <string notr="true">
-border-radius: 15px;
+
 padding: 10px;
 border: 2px solid rgba(12, 82, 117, 255);
 background-color: rgba(255, 255, 255, 200);
@@ -547,7 +545,7 @@ color: rgba(12, 82, 117, 255);
        </property>
        <property name="styleSheet">
         <string notr="true">
-border-radius: 15px;
+
 padding: 10px;
 border: 2px solid rgba(12, 82, 117, 255);
 background-color: rgba(255, 255, 255, 200);
@@ -564,10 +562,8 @@ color: rgba(12, 82, 117, 255);
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true"> 
-border-radius: 15px;
+        <string notr="true">border: 2px solid rgba(12, 82, 117, 255); 
 padding: 10px;
-border: 2px solid rgba(12, 82, 117, 255);
 background-color: rgba(145, 145, 145, 200);
 color: rgba(12, 82, 117, 255);
 </string>
@@ -578,6 +574,44 @@ color: rgba(12, 82, 117, 255);
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>60</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Images/Соска.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>0</y>
+      <width>121</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Images/Бутылка.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
  </widget>
